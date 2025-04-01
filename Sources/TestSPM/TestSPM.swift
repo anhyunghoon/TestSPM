@@ -1,13 +1,14 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
+import SwiftUI
 
-
-public class TestSPM {
-    public init() {
-        
-    }
+public struct MyCustomView: View {
+    public init() {} // 외부에서 사용 가능하도록 공개 이니셜라이저 추가
     
-    public func sayHello(name: String) {
-        print("\(name) Hello")
+    public var body: some View {
+        Text("Hello, SwiftUI SPM!")
+            .font(.title)
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
     }
 }
